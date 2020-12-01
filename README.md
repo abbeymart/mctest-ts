@@ -1,4 +1,4 @@
 # mctestgo
 
-- Simple Asynchronous Test Package / Module 
-- See other packages/modules test folders for different test cases / scenarios and usage
+- Simple Test Package / Module 
+- See test file for different test cases / scenarios and usage
