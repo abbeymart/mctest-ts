@@ -1,5 +1,10 @@
 # Historical logs
 
+## Version 0.5.0
+
+- Release date: Dec 02, 2020
+- Added a feature to track and report at test case sections
+
 ## Version 0.4.0
 
 - Release date: Dec 02, 2020

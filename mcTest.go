@@ -11,7 +11,7 @@ import (
 )
 
 // ***** types *****
-type TestFunction = func()
+type TestFunction func()
 
 // make params public
 type OptionValue struct {
@@ -23,6 +23,7 @@ type OptionValue struct {
 
 // ***** variables *****
 var (
+	caseName       = ""
 	unitTestPassed = 0
 	unitTestFailed = 0
 	passedTest     = 0
@@ -38,11 +39,12 @@ func AssertEquals(t *testing.T, expr interface{}, result interface{}, message st
 		passedTest += 1
 		return "Passed"
 	}
-	t.Errorf("\nFailed: %v => Expected %v, Got %v", message, result, expr)
+	fmt.Printf("\nFailed [Test-Case: %v]: %v => Expected %v, Got %v", caseName, message, result, expr)
+	t.Errorf("\nFailed [Test-Case: %v]: %v => Expected %v, Got %v", caseName, message, result, expr)
 	fmt.Printf("\n")
 	unitTestFailed += 1
 	failedTest += 1
-	return fmt.Sprintf("Failed: %v => Expected %v, Got %v", message, result, expr)
+	return fmt.Sprintf("Failed [Test-Case: %v]: %v => Expected %v, Got %v", caseName, message, result, expr)
 }
 
 // assert not equals
@@ -53,11 +55,12 @@ func AssertNotEquals(t *testing.T, expr interface{}, result interface{}, message
 		passedTest += 1
 		return "Passed"
 	}
-	t.Errorf("\nFailed: %v => Expected %v and %v not to be equals", message, result, expr)
+	fmt.Printf("\nFailed [Test-Case: %v]: %v => Expected %v and %v not to be equals", caseName, message, result, expr)
+	t.Errorf("\nFailed [Test-Case: %v]: %v => Expected %v and %v not to be equals", caseName, message, result, expr)
 	fmt.Printf("\n")
 	unitTestFailed += 1
 	failedTest += 1
-	return fmt.Sprintf("\nFailed: %v => Expected %v and %v not to be equals", message, result, expr)
+	return fmt.Sprintf("\nFailed [Test-Case: %v]: %v => Expected %v and %v not to be equals", caseName, message, result, expr)
 }
 
 // assert not strict equals => deep equality check through stringified values
@@ -72,11 +75,12 @@ func AssertStrictEquals(t *testing.T, expr interface{}, result interface{}, mess
 		passedTest += 1
 		return "Passed"
 	}
-	t.Errorf("\nFailed: %v => Expected %v, Got %v", message, string(jsonResult), string(jsonExpr))
+	fmt.Printf("\nFailed [Test-Case: %v]: %v => Expected %v, Got %v", caseName, message, string(jsonResult), string(jsonExpr))
+	t.Errorf("\nFailed [Test-Case: %v]: %v => Expected %v, Got %v", caseName, message, string(jsonResult), string(jsonExpr))
 	fmt.Printf("\n")
 	unitTestFailed += 1
 	failedTest += 1
-	return fmt.Sprintf("Failed: %v => Expected %v, Got %v", message, string(jsonResult), string(jsonExpr))
+	return fmt.Sprintf("Failed [Test-Case: %v]: %v => Expected %v, Got %v", caseName, message, string(jsonResult), string(jsonExpr))
 }
 
 // assert strict equals => deep equality check through stringified values
@@ -91,11 +95,12 @@ func AssertNotStrictEquals(t *testing.T, expr interface{}, result interface{}, m
 		passedTest += 1
 		return "Passed"
 	}
-	t.Errorf("\nFailed: %v => Expected %v and %v not to be equals", message, string(jsonResult), string(jsonExpr))
+	fmt.Printf("\nFailed [Test-Case: %v]: %v => Expected %v and %v not to be equals", caseName, message, string(jsonResult), string(jsonExpr))
+	t.Errorf("\nFailed [Test-Case: %v]: %v => Expected %v and %v not to be equals", caseName, message, string(jsonResult), string(jsonExpr))
 	fmt.Printf("\n")
 	unitTestFailed += 1
 	failedTest += 1
-	return fmt.Sprintf("Failed: %v => Expected %v and %v not to be equals", message, string(jsonResult), string(jsonExpr))
+	return fmt.Sprintf("Failed [Test-Case: %v]: %v => Expected %v and %v not to be equals", caseName, message, string(jsonResult), string(jsonExpr))
 }
 
 func McTest(options OptionValue) {
@@ -108,6 +113,8 @@ func McTest(options OptionValue) {
 	} else {
 		testName = "Unknown"
 	}
+	// make current testName accessible from textFunc
+	caseName = testName
 
 	if options.TestFunc != nil {
 		testFunc = options.TestFunc

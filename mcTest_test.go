@@ -14,14 +14,14 @@ var (
 	result4 = map[string]string{"location": "Abi"}
 )
 
-func Expr1() int { return 100 }
-func Expr2() int { return 200 }
-func Expr3() map[string]string {return result3}
-func Expr4() map[string]string {return result4}
+func Expr1() int               { return 100 }
+func Expr2() int               { return 200 }
+func Expr3() map[string]string { return result3 }
+func Expr4() map[string]string { return result4 }
 func TestSetCache(t *testing.T) {
 	McTest(OptionValue{
 		Name: "Test Series 100",
-		TestFunc: func(){
+		TestFunc: func() {
 			AssertEquals(t, Expr1(), result1, "Expected outcome: 100")
 			AssertEquals(t, Expr2(), result2, "Expected outcome: 200")
 			AssertNotEquals(t, Expr1(), result2, "Expected expr and result not equals")
@@ -32,7 +32,7 @@ func TestSetCache(t *testing.T) {
 	})
 	McTest(OptionValue{
 		Name: "Test Series 200",
-		TestFunc: func(){
+		TestFunc: func() {
 			AssertEquals(t, Expr1(), result1, "Expected outcome: 100")
 			AssertEquals(t, Expr2(), result2, "Expected outcome: 200")
 			AssertNotEquals(t, Expr1(), result2, "Expected expr and result not equals")
