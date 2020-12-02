@@ -36,13 +36,12 @@ func AssertEquals(expr interface{}, result interface{}, message string) string {
 		unitTestPassed += 1
 		passedTest += 1
 		return "Passed"
-	} else {
-		fmt.Printf("\nFailed: %v => Expected %v, Got %v", message, result, expr)
-		fmt.Printf("\n")
-		unitTestFailed += 1
-		failedTest += 1
-		return fmt.Sprintf("Failed: %v => Expected %v, Got %v", message, result, expr)
 	}
+	fmt.Printf("\nFailed: %v => Expected %v, Got %v", message, result, expr)
+	fmt.Printf("\n")
+	unitTestFailed += 1
+	failedTest += 1
+	return fmt.Sprintf("Failed: %v => Expected %v, Got %v", message, result, expr)
 }
 
 // assert not equals
@@ -52,13 +51,12 @@ func AssertNotEquals(expr interface{}, result interface{}, message string) strin
 		unitTestPassed += 1
 		passedTest += 1
 		return "Passed"
-	} else {
-		fmt.Printf("\nFailed: %v => Expected %v and %v not to be equals", message, result, expr)
-		fmt.Printf("\n")
-		unitTestFailed += 1
-		failedTest += 1
-		return fmt.Sprintf("\nFailed: %v => Expected %v and %v not to be equals", message, result, expr)
 	}
+	fmt.Printf("\nFailed: %v => Expected %v and %v not to be equals", message, result, expr)
+	fmt.Printf("\n")
+	unitTestFailed += 1
+	failedTest += 1
+	return fmt.Sprintf("\nFailed: %v => Expected %v and %v not to be equals", message, result, expr)
 }
 
 // assert not strict equals => deep equality check through stringified values
@@ -72,13 +70,12 @@ func AssertStrictEquals(expr interface{}, result interface{}, message string) st
 		unitTestPassed += 1
 		passedTest += 1
 		return "Passed"
-	} else {
-		fmt.Printf("\nFailed: %v => Expected %v, Got %v", message, string(jsonResult), string(jsonExpr))
-		fmt.Printf("\n")
-		unitTestFailed += 1
-		failedTest += 1
-		return fmt.Sprintf("Failed: %v => Expected %v, Got %v", message, string(jsonResult), string(jsonExpr))
 	}
+	fmt.Printf("\nFailed: %v => Expected %v, Got %v", message, string(jsonResult), string(jsonExpr))
+	fmt.Printf("\n")
+	unitTestFailed += 1
+	failedTest += 1
+	return fmt.Sprintf("Failed: %v => Expected %v, Got %v", message, string(jsonResult), string(jsonExpr))
 }
 
 // assert strict equals => deep equality check through stringified values
@@ -92,13 +89,12 @@ func AssertNotStrictEquals(expr interface{}, result interface{}, message string)
 		unitTestPassed += 1
 		passedTest += 1
 		return "Passed"
-	} else {
-		fmt.Printf("\nFailed: %v => Expected %v and %v not to be equals", message, string(jsonResult), string(jsonExpr))
-		fmt.Printf("\n")
-		unitTestFailed += 1
-		failedTest += 1
-		return fmt.Sprintf("Failed: %v => Expected %v and %v not to be equals", message, string(jsonResult), string(jsonExpr))
 	}
+	fmt.Printf("\nFailed: %v => Expected %v and %v not to be equals", message, string(jsonResult), string(jsonExpr))
+	fmt.Printf("\n")
+	unitTestFailed += 1
+	failedTest += 1
+	return fmt.Sprintf("Failed: %v => Expected %v and %v not to be equals", message, string(jsonResult), string(jsonExpr))
 }
 
 func McTest(options OptionValue) {
