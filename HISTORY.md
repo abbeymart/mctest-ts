@@ -1,5 +1,10 @@
 # Historical logs
 
+## Version 0.4.0
+
+- Release date: Dec 02, 2020
+- Refactored to align with go-test package tracking and summary reporting
+
 ## Version 0.3.0
 
 - Release date: Dec 02, 2020

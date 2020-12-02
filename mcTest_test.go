@@ -22,23 +22,23 @@ func TestSetCache(t *testing.T) {
 	McTest(OptionValue{
 		Name: "Test Series 100",
 		TestFunc: func(){
-			AssertEquals(Expr1(), result1, "Expected outcome: 100")
-			AssertEquals(Expr2(), result2, "Expected outcome: 200")
-			AssertNotEquals(Expr1(), result2, "Expected expr and result not equals")
-			AssertNotEquals(Expr2(), result1, "Expected expr and result not equals")
-			AssertStrictEquals(Expr3(), result3, "Expected outcome: strictly equals")
-			AssertStrictEquals(Expr4(), result4, "Expected outcome: strictly equals")
+			AssertEquals(t, Expr1(), result1, "Expected outcome: 100")
+			AssertEquals(t, Expr2(), result2, "Expected outcome: 200")
+			AssertNotEquals(t, Expr1(), result2, "Expected expr and result not equals")
+			AssertNotEquals(t, Expr2(), result1, "Expected expr and result not equals")
+			AssertStrictEquals(t, Expr3(), result3, "Expected outcome: strictly equals")
+			AssertStrictEquals(t, Expr4(), result4, "Expected outcome: strictly equals")
 		},
 	})
 	McTest(OptionValue{
 		Name: "Test Series 200",
 		TestFunc: func(){
-			AssertEquals(Expr1(), result1, "Expected outcome: 100")
-			AssertEquals(Expr2(), result2, "Expected outcome: 200")
-			AssertNotEquals(Expr1(), result2, "Expected expr and result not equals")
-			AssertNotEquals(Expr2(), result1, "Expected expr and result not equals")
-			AssertNotStrictEquals(Expr3(), result4, "Expected outcome: not strictly equals")
-			AssertNotStrictEquals(Expr4(), result3, "Expected outcome: not strictly equals")
+			AssertEquals(t, Expr1(), result1, "Expected outcome: 100")
+			AssertEquals(t, Expr2(), result2, "Expected outcome: 200")
+			AssertNotEquals(t, Expr1(), result2, "Expected expr and result not equals")
+			AssertNotEquals(t, Expr2(), result1, "Expected expr and result not equals")
+			AssertNotStrictEquals(t, Expr3(), result4, "Expected outcome: not strictly equals")
+			AssertNotStrictEquals(t, Expr4(), result3, "Expected outcome: not strictly equals")
 		},
 	})
 
