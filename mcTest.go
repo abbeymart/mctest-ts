@@ -13,10 +13,10 @@ import (
 type TestFunction = func()
 
 type OptionValue struct {
-	name     string
-	testFunc TestFunction
-	before   string
-	after    string
+	Name     string
+	TestFunc TestFunction
+	Before   string
+	After    string
 }
 
 // ***** variables *****
@@ -105,14 +105,14 @@ func McTest(options OptionValue) {
 		testName string
 		testFunc TestFunction
 	)
-	if options.name != "" {
-		testName = options.name
+	if options.Name != "" {
+		testName = options.Name
 	} else {
 		testName = "Unknown"
 	}
 
-	if options.testFunc != nil {
-		testFunc = options.testFunc
+	if options.TestFunc != nil {
+		testFunc = options.TestFunc
 	} else {
 		testFunc = nil
 	}

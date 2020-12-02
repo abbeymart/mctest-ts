@@ -10,7 +10,7 @@ import "testing"
 var (
 	result1 = 100
 	result2 = 200
-	result3 = map[string]string{"name": "Abi"}
+	result3 = map[string]string{"Name": "Abi"}
 	result4 = map[string]string{"location": "Abi"}
 )
 
@@ -20,8 +20,8 @@ func Expr3() map[string]string {return result3}
 func Expr4() map[string]string {return result4}
 func TestSetCache(t *testing.T) {
 	McTest(OptionValue{
-		name: "Test Series 100",
-		testFunc: func(){
+		Name: "Test Series 100",
+		TestFunc: func(){
 			AssertEquals(Expr1(), result1, "Expected outcome: 100")
 			AssertEquals(Expr2(), result2, "Expected outcome: 200")
 			AssertNotEquals(Expr1(), result2, "Expected expr and result not equals")
@@ -31,8 +31,8 @@ func TestSetCache(t *testing.T) {
 		},
 	})
 	McTest(OptionValue{
-		name: "Test Series 200",
-		testFunc: func(){
+		Name: "Test Series 200",
+		TestFunc: func(){
 			AssertEquals(Expr1(), result1, "Expected outcome: 100")
 			AssertEquals(Expr2(), result2, "Expected outcome: 200")
 			AssertNotEquals(Expr1(), result2, "Expected expr and result not equals")
