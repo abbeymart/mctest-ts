@@ -1,5 +1,10 @@
 # Historical logs
 
+## Version 0.3.0
+
+- Release date: Dec 02, 2020
+- Refactored test functions
+
 ## Version 0.2.0
 
 - Release date: Dec 01, 2020
