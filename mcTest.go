@@ -12,6 +12,7 @@ import (
 // ***** types *****
 type TestFunction = func()
 
+// make params public
 type OptionValue struct {
 	Name     string
 	TestFunc TestFunction
