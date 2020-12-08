@@ -1,5 +1,10 @@
 # Historical logs
 
+## Version 0.5.1
+
+- Release date: Dec 08, 2020
+- Updated github package link / reference
+
 ## Version 0.5.0
 
 - Release date: Dec 02, 2020
