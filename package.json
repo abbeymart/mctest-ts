@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abbeymart/mc-test.git"
+    "url": "git+https://github.com/abbeymart/mctest.git"
   },
   "keywords": [
     "testing",
@@ -31,9 +31,9 @@
   "author": "Abi Akindele [abbeymart | mconnect.biz]",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abbeymart/mc-test/issues"
+    "url": "https://github.com/abbeymart/mctest/issues"
   },
-  "homepage": "https://github.com/abbeymart/mc-test#readme",
+  "homepage": "https://github.com/abbeymart/mctest#readme",
   "devDependencies": {
     "@types/node": "^14.14.13",
     "typescript": "^4.1.3"
