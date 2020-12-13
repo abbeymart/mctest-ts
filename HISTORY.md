@@ -1,5 +1,10 @@
 # Historical logs
 
+## Version 0.2.5
+
+- Release date: Dec 13, 2020
+- npm/github publication: resolving build access
+
 ## Version 0.2.1
 
 - Release date: Dec 13, 2020
