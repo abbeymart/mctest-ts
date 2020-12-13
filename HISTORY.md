@@ -1,5 +1,11 @@
 # Historical logs
 
+## Version 0.2.7
+
+- Release date: Dec 13, 2020
+- set module to commonjs in tsconfig and remove js extension from index file
+
+
 ## Version 0.2.6
 
 - Release date: Dec 13, 2020
