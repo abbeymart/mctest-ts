@@ -1,6 +1,6 @@
 {
-  "name": "@mconnect/test",
-  "version": "0.2.1",
+  "name": "@mconnect/mctest",
+  "version": "0.2.3",
   "description": "mConnect Testing Package",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
