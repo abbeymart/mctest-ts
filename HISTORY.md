@@ -1,5 +1,11 @@
 # Historical logs
 
+## Version 0.2.6
+
+- Release date: Dec 13, 2020
+- npm/github publication: updated github url
+
+
 ## Version 0.2.5
 
 - Release date: Dec 13, 2020

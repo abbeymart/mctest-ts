@@ -1,6 +1,6 @@
 {
   "name": "@mconnect/mctest",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "mConnect Testing Package",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abbeymart/mctest.git"
+    "url": "git+https://github.com/abbeymart/mctest-ts.git"
   },
   "keywords": [
     "testing",
@@ -30,9 +30,9 @@
   "author": "Abi Akindele [abbeymart | mconnect.biz]",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abbeymart/mctest/issues"
+    "url": "https://github.com/abbeymart/mctest-ts/issues"
   },
-  "homepage": "https://github.com/abbeymart/mctest#readme",
+  "homepage": "https://github.com/abbeymart/mctest-ts#readme",
   "devDependencies": {
     "@types/node": "^14.14.13",
     "typescript": "^4.1.3"
