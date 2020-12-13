@@ -1,5 +1,5 @@
 {
-  "name": "mctest",
+  "name": "@mconnect/test",
   "version": "0.2.0",
   "description": "mConnect Testing Package",
   "main": "lib/cjs/index.js",
