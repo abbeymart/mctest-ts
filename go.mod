@@ -1,3 +1,3 @@
-module github.com/abbeymart/mctestgo
+module github.com/abbeymart/mctest
 
 go 1.15
