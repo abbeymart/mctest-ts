@@ -2,7 +2,7 @@
 
 ## Version 0.5.5
 
-- Release date: May 20, 2022
+- Release date: May 18, 2022
 - updated dep-packages, fine-tune test-functions-return-types
 
 ## Version 0.5.2
