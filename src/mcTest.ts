@@ -24,7 +24,7 @@ let failedTest = 0;
 // Helper functions | TODO: include feature to write the test result/report to an output file
 
 // delay/pause testing task
-export async function delay(ms: number) {
+export async function delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -127,7 +127,7 @@ export function assertNotStrictEquals(expr: any, result: any, message?: string):
 // TODO: test Expr-includes/excludes-result and other testing scenarios/features
 
 // Access params: test-name, test-functions, test-options
-export async function mcTest(options: OptionValue) {
+export async function mcTest(options: OptionValue): Promise<void> {
     try {
         const testName = options && options.name ? options?.name : 'Unknown';
         const testFunction = options && options.testFunc ? options?.testFunc : null;
@@ -153,7 +153,7 @@ export async function mcTest(options: OptionValue) {
     }
 }
 
-export async function postTestResult() {
+export async function postTestResult(): Promise<void> {
     console.log('============================');
     console.log('All Tests Summary Stats:');
     console.log('============================');

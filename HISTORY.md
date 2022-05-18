@@ -1,5 +1,16 @@
 # Historical logs
 
+## Version 0.5.5
+
+- Release date: May 20, 2022
+- updated dep-packages, fine-tune test-functions-return-types
+
+## Version 0.5.2
+
+- Release date: Dec 13, 2020
+- updated github link
+
+
 ## Version 0.2.7
 
 - Release date: Dec 13, 2020
