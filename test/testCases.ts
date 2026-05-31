@@ -11,7 +11,7 @@ import {
     assertNotStrictEquals,
     assertStrictEquals,
     mcTest,
-    postTestResult
+    postTestResult, ValueType
 } from "../src";
 
 // test-data
@@ -28,11 +28,11 @@ function Expr2(): number {
     return 200
 }
 
-function Expr3(): object {
+function Expr3(): ValueType {
     return result3
 }
 
-function Expr4(): object {
+function Expr4(): ValueType {
     return result4
 }
 
@@ -64,6 +64,6 @@ function Expr4(): object {
         },
     });
 
-    await postTestResult();
+    postTestResult();
 
 })();

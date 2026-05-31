@@ -15,6 +15,19 @@ interface OptionValue {
     after?: string;
 }
 
+export type ValueType =
+    Record<string, unknown>
+    | Array<Record<string, unknown>>
+    | string
+    | number
+    | Array<string>
+    | Array<number>
+    | boolean
+    | Array<boolean>;
+
+export interface ObjectType {
+    [key: string]: ValueType;
+}
 // Test counts
 let unitTestPassed = 0;
 let unitTestFailed = 0;
@@ -29,7 +42,7 @@ export async function delay(ms: number): Promise<void> {
 }
 
 // assert equals
-export function assertEquals(expr: any, result: any, message?: string): string {
+export function assertEquals(expr: ValueType, result: ValueType, message?: string): string {
     try {
         if (expr === result) {
             console.log('Passed');
@@ -53,7 +66,7 @@ export function assertEquals(expr: any, result: any, message?: string): string {
 }
 
 // assert not equals
-export function assertNotEquals(expr: any, result: any, message?: string): string {
+export function assertNotEquals(expr: ValueType, result: ValueType, message?: string): string {
     try {
         if (expr !== result) {
             console.log('Passed');
@@ -77,7 +90,7 @@ export function assertNotEquals(expr: any, result: any, message?: string): strin
 }
 
 // assert strict equals => deep equality check through stringified values
-export function assertStrictEquals(expr: any, result: any, message?: string): string {
+export function assertStrictEquals(expr: ValueType, result: ValueType, message?: string): string {
     try {
         if (JSON.stringify(expr) === JSON.stringify(result)) {
             console.log('Passed');
@@ -101,7 +114,7 @@ export function assertStrictEquals(expr: any, result: any, message?: string): st
 }
 
 // assert not strict equals => deep equality check through stringified values
-export function assertNotStrictEquals(expr: any, result: any, message?: string): string {
+export function assertNotStrictEquals(expr: ValueType, result: ValueType, message?: string): string {
     try {
         if (JSON.stringify(expr) !== JSON.stringify(result)) {
             console.log('Passed');
@@ -153,7 +166,7 @@ export async function mcTest(options: OptionValue): Promise<void> {
     }
 }
 
-export async function postTestResult(): Promise<void> {
+export function postTestResult(): void {
     console.log('============================');
     console.log('All Tests Summary Stats:');
     console.log('============================');

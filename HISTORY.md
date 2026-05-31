@@ -1,5 +1,11 @@
 # Historical logs
 
+## Version 0.6.0
+
+- Release date: TBD
+- refactored-to-concrete-types
+- updated-dep-packages (May-31-2026)
+
 ## Version 0.5.5
 
 - Release date: May 18, 2022
