@@ -1,6 +1,6 @@
 /**
  * @Author: abbeymart | Abi Akindele | @Created: 2020-07-14
- * @Company: Copyright 2020 Abi Akindele  | mConnect.biz
+ * @Company: Copyright 2020 Abi Akindele | mConnect.biz
  * @License: All Rights Reserved | LICENSE.md
  * @Description: mc-central-ts: testing module functions
  */
@@ -147,7 +147,7 @@ export async function mcTest(options: OptionValue): Promise<void> {
         console.log(`Running Test: ${testName}`);
         console.log('======================================================');
         if (testFunction) {
-            await testFunction();
+            testFunction();
         } else {
             console.error('No test task/function specified - Test skipped!!!');
         }
