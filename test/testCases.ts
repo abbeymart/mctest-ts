@@ -6,12 +6,7 @@
  */
 
 import {
-    assertEquals,
-    assertNotEquals,
-    assertNotStrictEquals,
-    assertStrictEquals,
-    mcTest,
-    postTestResult, ValueType
+    assertEquals, assertNotEquals, assertNotStrictEquals, assertStrictEquals, mcTest, postTestResult, ValueType
 } from "../src";
 
 // test-data

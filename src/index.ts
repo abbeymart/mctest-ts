@@ -5,4 +5,5 @@
  * @Description: mc-central-ts: mc-test module for testing activities
  */
 
+export * from './types';
 export * from './mcTest';

@@ -3,31 +3,10 @@
  * @Company: Copyright 2020 Abi Akindele | mConnect.biz
  * @License: All Rights Reserved | LICENSE.md
  * @Description: mc-central-ts: testing module functions
+ * @Deprecated - legacy code, use mcTestClass instead | Updated: 2026-06-02
  */
+import { OptionValue, ValueType } from "./types";
 
-// types
-type TestFunction = () => void;
-
-interface OptionValue {
-    name?: string;
-    testFunc?: TestFunction;
-    before?: string;
-    after?: string;
-}
-
-export type ValueType =
-    Record<string, unknown>
-    | Array<Record<string, unknown>>
-    | string
-    | number
-    | Array<string>
-    | Array<number>
-    | boolean
-    | Array<boolean>;
-
-export interface ObjectType {
-    [key: string]: ValueType;
-}
 // Test counts
 let unitTestPassed = 0;
 let unitTestFailed = 0;
@@ -35,11 +14,6 @@ let passedTest = 0;
 let failedTest = 0;
 
 // Helper functions | TODO: include feature to write the test result/report to an output file
-
-// delay/pause testing task
-export async function delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 // assert equals
 export function assertEquals(expr: ValueType, result: ValueType, message?: string): string {
