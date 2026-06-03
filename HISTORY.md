@@ -1,5 +1,11 @@
 # Historical logs
 
+## Version 0.6.1
+
+- Release date: June-02-2026
+- exported-missing-class-method-and-factory-function-v0.6.1
+
+
 ## Version 0.6.0
 
 - Release date: June-02-2026

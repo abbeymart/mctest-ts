@@ -2,7 +2,7 @@
 
 import { OptionValue, TestFunction, UnitTestResult } from "./types";
 
-class McTest {
+export class McTest {
     private unitTestPassed = 0;
     private unitTestFailed = 0;
     private unitTestTotal = 0;
