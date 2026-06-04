@@ -5,7 +5,7 @@
  * @Description: mc-central-ts: testing module functions
  * @Deprecated - legacy code, use mcTestClass instead | Updated: 2026-06-02
  */
-import { OptionValue, ValueType } from "./types";
+import { ParamsType, ValueType } from "./types";
 
 // Test counts
 let unitTestPassed = 0;
@@ -114,7 +114,7 @@ export function assertNotStrictEquals(expr: ValueType, result: ValueType, messag
 // TODO: test Expr-includes/excludes-result and other testing scenarios/features
 
 // Access params: test-name, test-functions, test-options
-export async function mcTest(options: OptionValue): Promise<void> {
+export async function mcTest(options: ParamsType): Promise<void> {
     try {
         const testName = options && options.name ? options?.name : 'Unknown';
         const testFunction = options && options.testFunc ? options?.testFunc : null;

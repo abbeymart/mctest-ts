@@ -1,17 +1,22 @@
 // 2026-06-02
 
-import { OptionValue, TestFunction, UnitTestResult } from "./types";
+import { ParamsType, TestFunction, UnitTestResult } from "./types";
 
 export class McTest {
     private unitTestPassed = 0;
     private unitTestFailed = 0;
     private unitTestTotal = 0;
     private readonly testName: string;
-    private readonly testFunction: TestFunction | null;
+    private testFunction: TestFunction | null;
 
-    constructor(options: OptionValue) {
+    constructor(options: ParamsType) {
         this.testName = options.name ? options.name : 'Unknown';
         this.testFunction = options.testFunc ? options.testFunc : null;
+    }
+
+    // set test-instance function
+    setTestFunction(testFunc: TestFunction): void {
+        this.testFunction = testFunc;
     }
 
     // update unitTest values
@@ -129,7 +134,7 @@ export class McTest {
 }
 
 // factory function to create a new McTest instance
-export function newTest(options: OptionValue): McTest {
+export function newTest(options: ParamsType): McTest {
     return new McTest(options);
 }
 

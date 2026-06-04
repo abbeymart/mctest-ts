@@ -3,7 +3,7 @@ export type TestFunction = () => void;
 
 // export type AsyncTestFunction = () => Promise<void>;
 
-export interface OptionValue {
+export interface ParamsType {
     name?: string;
     testFunc?: TestFunction;
     before?: string;
